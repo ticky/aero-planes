@@ -62,7 +62,7 @@ class AeroPlanesBot < Ebooks::Bot
 
     location_name = parsed_location['features'].select{
       |location| !location.nil? && !location['place_name'].nil? && !location['place_name'].empty?
-    }.first['place_name']
+    }.first['place_name'].gsub(/, #{origin_country}$/, '')
 
     log "Hey, it's at #{location_name}! Let's build a tweet..."
 
