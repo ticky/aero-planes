@@ -1,7 +1,6 @@
 require 'twitter_ebooks'
 require 'httparty'
 require 'open-uri'
-require 'pry'
 
 def format_number(number)
   number.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
